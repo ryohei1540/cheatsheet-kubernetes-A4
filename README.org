@@ -42,7 +42,7 @@ File me [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/issues][Issues
 | kubectl run shell command            | =kubectl exec -it mytest -- ls -l /etc/hosts=                                             |
 | Get system conf via configmap        | =kubectl -n kube-system get cm kubeadm-config -o yaml=                                    |
 | Get deployment yaml                  | =kubectl -n denny-websites get deployment mysql -o yaml=                                  |
-| Explain resource                     | =kubectl explain pods=, =kubectl explain svc=                                             |
+| Explain resource                     | =kubectl explain pods --recursive | grep hogehoge A3=, =kubectl explain svc=                                             |
 | Watch pods                           | =kubectl get pods  -n wordpress --watch=                                                  |
 | Query healthcheck endpoint           | =curl -L http://127.0.0.1:10250/healthz=                                                  |
 | Open a bash terminal in a pod        | =kubectl exec -it storage sh=                                                             |
