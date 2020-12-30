@@ -53,6 +53,7 @@ File me [[https://github.com/dennyzhang/cheatsheet.dennyzhang.com/issues][Issues
 | Get services sorted by name          | kubectl get services --sort-by=.metadata.name                                             |
 | Get pods sorted by restart count     | kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'                    |
 | List pods and images                 | kubectl get pods -o='custom-columns=PODS:.metadata.name,Images:.spec.containers[*].image' |
+| Taint                                | kubectl taint nodes node01 spray=mortein:NoSchedule                                       |
 | List all container images            | [[https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/list-all-images.sh#L14-L17][list-all-images.sh]]                                                                        |
 | kubeconfig skip tls verification     | [[https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/skip-tls-verify.md][skip-tls-verify.md]]                                                                        |
 | [[https://kubernetes.io/docs/tasks/tools/install-kubectl/][Ubuntu install kubectl]]               | ="deb https://apt.kubernetes.io/ kubernetes-xenial main"=                                 |
